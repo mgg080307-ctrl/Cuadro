@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 6.
+Una pinturería se dedica a asesorar a sus clientes y cuando uno llega a comprar le pregunta
+cuál es el alto, ancho y largo de la habitación a pintar si se quiere pintar con sus productos
+tipo A, B, C los cuales tienen diferente rendimiento de litros por mt2 cada uno.
+Desarrollar un programa que permita calcular cuántos litros necesitará comprar el usuario
+para dar dos manos y cuánto gastará en la pintura.*/
+        let alto = parseFloat(prompt('ingresa el alto de la habitación a pintar'));
+        let ancho = parseFloat(prompt('ingresa el ancho de la habitación a pintar'));
+        let largo = parseFloat(prompt('ingresa el largo de la habitación a pintar'));
+        let tipoPintura = prompt('ingresa el tipo de pintura que queres usar (A, B o C)');
+        let areaParedes = 2 * (alto * ancho + alto * largo);
+        let litrosNecesarios;
+        let costoTotal;
+        if (tipoPintura.toUpperCase() === 'A') {
+            litrosNecesarios = areaParedes / 10; // rendimiento de 10 mt2 por litro
+            costoTotal = litrosNecesarios * 15; // precio por litro de pintura A
+        } else if (tipoPintura.toUpperCase() === 'B') {
+            litrosNecesarios = areaParedes / 12; // rendimiento de 12 mt2 por litro
+            costoTotal = litrosNecesarios * 20; // precio por litro de pintura B
+        } else if (tipoPintura.toUpperCase() === 'C') {
+            litrosNecesarios = areaParedes / 8; // rendimiento de 8 mt2 por litro
+            costoTotal = litrosNecesarios * 25; // precio por litro de pintura C
+        } else {
+            alert('tipo de pintura no válido');
+        }
+        alert('necesitarás comprar ' + litrosNecesarios.toFixed(2) + ' litros de pintura y gastarás $' + costoTotal.toFixed(2));
+    </script>
+</body>
+</html>

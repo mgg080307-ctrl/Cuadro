@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>/*supongamos que vamos a Farmacity a comprar un medicamento. Al acercarnos al
+sector de farmacia vemos que tenemos que sacar un número para ser recibidos.
+El cliente puede ir con receta emitida por su cobertura médica (botón A) o de forma
+particular (botón B). Entregar un número al usuario según el botón que oprima. En ambos
+casos el número será 10 seguido por la letra de la alternativa elegida.*/
+        let opcion = prompt('ingresa "A" si tenes receta emitida por tu cobertura médica o "B" si sos particular');
+        let numero;
+        if (opcion.toUpperCase() === 'A') {
+            numero = '10A';
+        } else if (opcion.toUpperCase() === 'B') {
+            numero = '10B';
+        } else {
+            alert('Porfavor, ingresa "A" o "B"');
+        }
+        alert('Tu número es ' + numero);
+    </script>
+</body>
+</html>

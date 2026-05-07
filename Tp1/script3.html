@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 3. Cálculos geométricos.
+a. Solicitar al usuario el valor del radio y calcular el área del círculo. Mostrar el resultado en
+la pantalla.
+b. Solicitar al usuario que ingrese el valor del lado de un cuadrado y mostrar por pantalla su
+área y su perímetro.
+c. Hacer un programa que calcule el área de un triángulo rectángulo, pidiendo al usuario los
+valores de base y altura, y que calcule el perímetro pidiendo al usuario el valor del lado
+restante. Mostrar todo en pantalla.
+d. Solicitar al usuario un número de dos dígitos para calcular el cuadrado del mismo y
+mostrarlo. Verificar que el usuario haya ingresado un valor de dos dígitos (entre 10 y 99). Si
+no lo hace, emitir un cartel que indique: “no se resolverá lo pedido.”.*/   
+        let radio = parseFloat(prompt('ingresa el valor del radio del circulo'));
+        let areaCirculo = Math.PI * Math.pow(radio, 2);
+        alert('el area del circulo es ' + areaCirculo);
+        let ladoCuadrado = parseFloat(prompt('ingresa el valor del lado del cuadrado'));
+        let areaCuadrado = Math.pow(ladoCuadrado, 2);
+        let perimetroCuadrado = ladoCuadrado * 4;
+        alert('el area del cuadrado es ' + areaCuadrado + ' y su perimetro es ' + perimetroCuadrado);
+        let baseTriangulo = parseFloat(prompt('ingresa el valor de la base del triangulo rectangulo'));
+        let alturaTriangulo = parseFloat(prompt('ingresa el valor de la altura del triangulo rectangulo'));
+        let areaTriangulo = (baseTriangulo * alturaTriangulo) / 2;
+        let ladoRestante = parseFloat(prompt('ingresa el valor del lado restante del triangulo rectangulo'));
+        let perimetroTriangulo = baseTriangulo + alturaTriangulo + ladoRestante;
+        alert('el area del triangulo rectangulo es ' + areaTriangulo + ' y su perimetro es ' + perimetroTriangulo);
+        let numeroDosDigitos = parseInt(prompt('ingresa un numero de dos digitos para calcular su cuadrado'));
+        if (numeroDosDigitos >= 10 && numeroDosDigitos <= 99) {
+            let cuadradoNumero = Math.pow(numeroDosDigitos, 2);
+            alert('el cuadrado de ' + numeroDosDigitos + ' es ' + cuadradoNumero);
+        } else {
+            alert('no se resolverá lo pedido.');
+        }   
+    </script>
+    
+</body>
+</html>

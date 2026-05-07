@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 12. Calculadora.
+Solicitar al usuario que ingrese dos números y una operación a realizar que puede ser
+suma, resta, división o multiplicación.
+Realice la operación correspondiente y devuelva todos los valores (los datos solicitados, la
+operación a realizar y el resultado de la misma).*/
+        let num1 = parseFloat(prompt('ingresa el primer numero'));
+        let num2 = parseFloat(prompt('ingresa el segundo numero'));
+        let operacion = prompt('ingresa la operacion a realizar (suma, resta, division o multiplicacion)');
+        let resultado;
+        if (operacion === 'suma') {
+            resultado = num1 + num2;
+        } else if (operacion === 'resta') {
+            resultado = num1 - num2;
+        } else if (operacion === 'division') {
+            resultado = num1 / num2;
+        } else if (operacion === 'multiplicacion') {
+            resultado = num1 * num2;
+        } else {
+            alert('operacion invalida, ingresa suma, resta, division o multiplicacion');
+        }
+        alert('los numeros ingresados fueron ' + num1 + ' y ' + num2 + ' la operacion a realizar es ' + operacion + ' el resultado de la operacion es ' + resultado);
+    </script>
+</body>
+</html>

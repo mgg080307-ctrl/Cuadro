@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 8.
+Realizar un programa que solicite al usuario ingresar el valor de dos variables y al finalizar
+el mismo deberá invertir estos valores, por ejemplo el usuario ingresa en la var1 el valor 5 y
+en la var2 el valor 10 y al finalizar el programa la var1 deberá contener el valor 10 y la var2
+deberá contener el valor 5. Mostrar por pantalla todos los valores correspondientes.*/
+        let var1 = prompt('ingresa el valor de la variable 1');
+        let var2 = prompt('ingresa el valor de la variable 2');
+        alert('el valor de la variable 1 es ' + var1 + ' y el valor de la variable 2 es ' + var2);
+        let temp = var1;
+        var1 = var2;
+        var2 = temp;
+        alert('el valor de la variable 1 ahora es ' + var1 + ' y el valor de la variable 2 ahora es ' + var2);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 7.
+Para una fiesta se necesitará calcular cuánto gastaremos en gaseosas teniendo en cuenta
+que el usuario deberá ingresar la cantidad de invitados que asistirán y que la gaseosa viene
+en envases de 2 1⁄4 lt. Sabemos que se calcula que cada invitado tomará entre 0,5 y 1,5 lts.
+Se requiere mostrar cuántos envases de gaseosa tendremos que comprar como mínimo,
+cuantos como máximo y cuántos envases promedio se consumirá.*/
+        let cantidadInvitados = parseInt(prompt('ingresa la cantidad de invitados a la fiesta'));
+        let consumoMinimo = cantidadInvitados * 0.5;
+        let consumoMaximo = cantidadInvitados * 1.5;
+        let consumoPromedio = (consumoMinimo + consumoMaximo) / 2;
+        let envasesMinimos = Math.ceil(consumoMinimo / 2.25);
+        let envasesMaximos = Math.ceil(consumoMaximo / 2.25);
+        let envasesPromedio = Math.ceil(consumoPromedio / 2.25);
+        alert('para ' + cantidadInvitados + ' invitados, necesitarás comprar al menos ' + envasesMinimos + ' envases de gaseosa, como máximo ' + envasesMaximos + ' envases y en promedio ' + envasesPromedio + ' envases');
+    </script>
+</body>
+</html>

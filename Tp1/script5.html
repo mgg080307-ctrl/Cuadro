@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 5.
+Solicitar al usuario el ancho y la profundidad de un terreno al que queremos parquizar.
+Solicitar el precio del mt
+
+2 de césped y calcular cuánto se gastará para realizar todo el trabajo
+teniendo en cuenta que el jardinero nos cobra por hora y que en cada hora puede colocar
+1,5 mt2 de césped.*/
+        let ancho = parseFloat(prompt('ingresa el ancho del terreno'));
+        let profundidad = parseFloat(prompt('ingresa la profundidad del terreno'));
+        let precioMt2 = parseFloat(prompt('ingresa el precio del mt2 de cesped'));
+        let areaTerreno = ancho * profundidad;
+        let costoTotal = areaTerreno * precioMt2;
+        alert('el costo total para parquizar el terreno es ' + costoTotal);
+        let horasTrabajo = areaTerreno / 1.5;
+        alert('el jardinero tardará ' + horasTrabajo + ' horas para colocar todo el césped');
+    </script>
+</body>
+</html>

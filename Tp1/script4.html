@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EEJERCICIO 4.
+Solicitar al usuario que ingrese la cantidad a comprar de un determinado producto y su
+precio unitario.
+a. Mostrar un mensaje que indique cuál es el total de la compra.
+b. Solicitar además cuál será la forma de pago (Efectivo / tarjeta). Si paga en efectivo se le
+realizará un 10% de descuento y si paga con tarjeta 5% de recargo. Mostrar el total de la
+compra.
+
+c. Suponiendo que sabemos que el cliente paga con tarjeta. Determinar cuánto pagará
+según sea: - si compra más de 30 unidades, tendrá un 15% de descuento, si compra más
+de 60 unidades tendrá un 25% de descuento, en cualquier otro caso recibirá un 5% de
+descuento.
+d. Solicitar al usuario la cantidad vendida de cada uno de los tres productos que vende.
+Determinar cuál es el porcentaje del total que le corresponde a cada uno. IMPORTANTE:
+Resolver este punto como un ejercicio separado del resto.*/
+        let cantidad = parseInt(prompt('ingresa la cantidad a comprar de un determinado producto'));
+        let precioUnitario = parseFloat(prompt('ingresa el precio unitario del producto'));
+        let totalCompra = cantidad * precioUnitario;
+        alert('el total de la compra es ' + totalCompra);
+        let formaPago = prompt('ingresa la forma de pago (Efectivo / tarjeta)');
+        if (formaPago.toLowerCase() === 'efectivo') {
+            let descuentoEfectivo = totalCompra * 0.10;
+            let totalConDescuentoEfectivo = totalCompra - descuentoEfectivo;
+            alert('el total de la compra con descuento por pago en efectivo es ' + totalConDescuentoEfectivo);
+        } else if (formaPago.toLowerCase() === 'tarjeta') {
+            let recargoTarjeta = totalCompra * 0.05;
+            let totalConRecargoTarjeta = totalCompra + recargoTarjeta;
+            alert('el total de la compra con recargo por pago con tarjeta es ' + totalConRecargoTarjeta);
+        } else {
+            alert('forma de pago no válida');
+        }
+        // Suponiendo que el cliente paga con tarjeta
+        if (cantidad > 60) {
+            let descuentoMayor60 = totalCompra * 0.25;
+            let totalConDescuentoMayor60 = totalCompra - descuentoMayor60;
+            alert('el total de la compra con descuento por comprar más de 60 unidades es ' + totalConDescuentoMayor60);
+        } else if (cantidad > 30) {
+            let descuentoMayor30 = totalCompra * 0.15;
+            let totalConDescuentoMayor30 = totalCompra - descuentoMayor30;
+            alert('el total de la compra con descuento por comprar más de 30 unidades es ' + totalConDescuentoMayor30);
+        } else {
+            let descuento5 = totalCompra * 0.05;
+            let totalConDescuento5 = totalCompra - descuento5;
+            alert('el total de la compra con descuento del 5% es ' + totalConDescuento5);
+        }
+    </script>
+</body>
+</html>

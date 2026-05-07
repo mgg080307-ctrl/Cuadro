@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /*EJERCICIO 2. Algoritmos de conversión.
+a. Solicite al usuario la cotización del día del dólar. Luego solicite que ingrese cuantos
+dólares quiere comprar y hacer que devuelva el monto que deberá abonar para poder
+adquirirlos.
+b. Solicitar al usuario que ingrese la cantidad de gramos que quiere convertir a kg y mostrar
+por pantalla ambos valores.
+c. Solicitar al usuario que ingrese una determinada cantidad de kg y calcular a cuántas
+libras corresponde.*/
+        let cotizacion = parseFloat(prompt('ingresa el valor del dolar del dia de hoy'));
+        let cantDolares = parseFloat(prompt('ingresa cantidad de dolares que queres comprar'));
+        let montoAabonar = cotizacion * cantDolares
+        alert('el monto que debes abonar para comprar ' + cantDolares + ' dolares es de ' + montoAabonar);
+        let gramos = parseFloat(prompt('ingresa la cantidad de gramos que queres convertir a kg'));
+        let kg = gramos / 1000;
+        alert('la cantidad de kg que tenes es ' + kg);    
+        let kg2 = parseFloat(prompt('ingresa la cantidad de kg que queres convertir a libras'));
+        let libras = kg2 * 2.20462; 
+        alert('la cantidad de libras que tenes es ' + libras);
+    </script>
+</body>
+</html>

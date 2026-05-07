@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 11.
+Diseñar un algoritmo pida al usuario el valor de la temperatura y escriba la actividad más
+apropiada para dicha temperatura teniendo en cuenta los siguientes criterios: para una
+temperatura mayor a 30o la actividad más apropiada es natación; para una temperatura
+mayor a 20o y menor o igual a 30o la actividad más apropiada es tenis; para una
+temperatura mayor a 10o y menor o igual a 20o la actividad más apropiada es golf; para una
+temperatura mayor a 5o y menor o igual a 10o la actividad más apropiada es esquí; y para
+una temperatura menor o igual a 5o la actividad más apropiada es jugar a las cartas.*/
+        let temperatura = parseFloat(prompt('ingresa la temperatura actual'));
+        if (temperatura > 30) {
+            alert('la actividad más apropiada para esta temperatura es natación');
+        } else if (temperatura > 20 && temperatura <= 30) {
+            alert('la actividad más apropiada para esta temperatura es tenis');
+        } else if (temperatura > 10 && temperatura <= 20) {
+            alert('la actividad más apropiada para esta temperatura es golf');
+        } else if (temperatura > 5 && temperatura <= 10) {
+            alert('la actividad más apropiada para esta temperatura es esquí');
+        } else if (temperatura <= 5) {
+            alert('la actividad más apropiada para esta temperatura es jugar a las cartas');
+        } else {
+            alert('temperatura invalida, ingresa un numero valido');
+        }
+    </script>
+</body>
+</html>

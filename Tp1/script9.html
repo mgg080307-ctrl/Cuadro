@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*EJERCICIO 9.
+Realizar un programa que pida al usuario la nota de un parcial y muestre la calificación
+correspondiente. La nota debe ser un número entero. Las calificaciones posibles son:
+desaprobado (para notas de 0 a 3), aprobado (para notas de 4 a 6), notable (para notas de
+7 a 8) o sobresaliente (para notas de 9 a 10).*/
+        let nota = parseInt(prompt('ingresa la nota del parcial'));
+        if (nota >= 0 && nota <= 3) {
+            alert('desaprobado');
+        } else if (nota >= 4 && nota <= 6) {
+            alert('aprobado');
+        } else if (nota >= 7 && nota <= 8) {
+            alert('notable');
+        } else if (nota >= 9 && nota <= 10) {
+            alert('sobresaliente');
+        } else {
+            alert('nota invalida, ingresa un numero entre 0 y 10');
+        }
+    </script>
+</body>
+</html>

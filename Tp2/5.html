@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>/*Un usuario tira un dado e ingresa el número que le ha tocado.
+Se deberá mostrar por pantalla el premio que le corresponde.
+si el número fue:
+1 = ganó un viaje
+2 = ganó una moto
+3 = ganó una estadía en un spa
+4 = ganó una bici
+5 = ganó una cena
+6 = ganó un chocolate*/
+        let numero = parseInt(prompt('Tira un dado y escribe el número que te salió'));
+        switch (numero) {
+            case 1:
+                alert('ganó un viaje');
+                break;
+            case 2:
+                alert('ganó una moto');
+                break;
+            case 3:
+                alert('ganó una estadía en un spa');
+                break;
+            case 4:
+                alert('ganó una bici');
+                break;
+            case 5:
+                alert('ganó una cena');
+                break;
+            case 6:
+                alert('ganó un chocolate casero');
+                break;
+            default:
+                alert('Los dados de mas de 6 caras no valen');
+        }
+    </script>
+</body>
+</html>

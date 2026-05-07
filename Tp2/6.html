@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>/*pedir tres números al usuario. Mostrarlos de mayor a menor por pantalla.*/
+        let numero1 = parseFloat(prompt('Ingresa un número'));
+        let numero2 = parseFloat(prompt('Ingresa un segundo número'));
+        let numero3 = parseFloat(prompt('Ingresa un tercer número'));
+
+        let numeros = [numero1, numero2, numero3];
+        numeros.sort(function(a, b) {
+            return b - a;
+        });
+        alert('Estos son los números de mayor a menor: ' + numeros.join(', '));
+    </script>
+</body>
+</html>
